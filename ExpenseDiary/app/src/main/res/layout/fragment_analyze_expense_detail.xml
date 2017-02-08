@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/color_gradient"
+    android:fillViewport="true"
+    android:orientation="vertical"
+    android:paddingBottom="20dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingTop="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:text="@string/category_expenses_title"
+            android:textSize="@dimen/largeTextSize"
+            android:textColor="@color/button_text_color"
+            android:textStyle="bold" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="35dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/categoryNameTitle"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center_horizontal"
+                    android:text="Tratki"
+                    android:textSize="@dimen/largeTextSize"
+                    android:textColor="@color/button_text_color"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/categoryPicture"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/ic_panorama_fish_eye_white_48dp" />
+
+            </LinearLayout>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp">
+
+                <RadioButton
+                    android:id="@+id/oneMonthBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:text="@string/one_month_title"
+                    android:textColor="@color/button_text_color" />
+
+                <RadioButton
+                    android:id="@+id/threeMonthBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:text="@string/three_month_title"
+                    android:textColor="@color/button_text_color" />
+
+                <RadioButton
+                    android:id="@+id/sixMonthBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:text="@string/six_month_title"
+                    android:textColor="@color/button_text_color" />
+
+                <RadioButton
+                    android:id="@+id/nineMonthBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:text="@string/nine_month_title"
+                    android:textColor="@color/button_text_color" />
+
+                <RadioButton
+                    android:id="@+id/twelveMonthBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/twelve_month_title"
+                    android:textColor="@color/button_text_color" />
+
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/incomeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:fillViewport="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/expensesTitle"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:text="@string/expenses_title"
+                    android:textSize="@dimen/textsize"
+                    android:textColor="@color/button_text_color"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/expensesAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:gravity="end"
+                    android:text="23213"
+                    android:textSize="@dimen/largeTextSize"
+                    android:textColor="@color/button_text_color"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <trac.portableexpensesdiary.basecomponents.AntiMonkeyButton
+            android:id="@+id/btnCancel"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:minWidth="150dp"
+            android:padding="10dp"
+            android:textSize="@dimen/textsize"
+            fancy:fb_borderColor="@color/button_text_color"
+            fancy:fb_borderWidth="1dp"
+            fancy:fb_defaultColor="@color/transparent"
+            fancy:fb_focusColor="#5577bd"
+            fancy:fb_fontIconSize="25sp"
+            fancy:fb_iconPosition="top"
+            fancy:fb_radius="5dp"
+            fancy:fb_text="Back"
+            fancy:fb_textColor="@color/button_text_color"
+            fancy:fb_iconResource="@drawable/ic_clear_white_48dp"
+            fancy:fb_textGravity="center_horizontal"/>
+
+    </LinearLayout>
+</ScrollView>

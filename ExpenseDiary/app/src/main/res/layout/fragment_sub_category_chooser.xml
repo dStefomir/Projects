@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/color_gradient"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:text="@string/sub_category_chooser_title"
+        android:textColor="@color/button_text_color"
+        android:textSize="@dimen/largeTextSize"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/button_text_color" />
+
+    <trac.portableexpensesdiary.basecomponents.AntiMonkeyGridView
+        android:id="@+id/subCategoryGridView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:numColumns="2" />
+
+    <trac.portableexpensesdiary.basecomponents.AntiMonkeyButton
+        android:id="@+id/btnCancel"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:minWidth="150dp"
+        android:padding="10dp"
+        android:textSize="@dimen/textsize"
+        fancy:fb_borderColor="@color/button_text_color"
+        fancy:fb_borderWidth="1dp"
+        fancy:fb_defaultColor="@color/transparent"
+        fancy:fb_focusColor="#5577bd"
+        fancy:fb_fontIconSize="25sp"
+        fancy:fb_iconPosition="top"
+        fancy:fb_iconResource="@drawable/ic_clear_white_48dp"
+        fancy:fb_radius="5dp"
+        fancy:fb_text="@string/cancel_btn"
+        fancy:fb_textColor="@color/button_text_color"
+        fancy:fb_textGravity="center_horizontal" />
+
+</LinearLayout>

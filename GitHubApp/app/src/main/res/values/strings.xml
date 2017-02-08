@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">GitHubApp</string>
+
+    <string name="user_name_hint">User Name</string>
+    <string name="user_password_hint">User Password</string>
+    <string name="btn_log">Login</string>
+    <string name="title_success">Success</string>
+    <string name="title_warning">Warning</string>
+    <string name="ok_btn">OK</string>
+    <string name="empty_field_err">This field cannot be empty!</string>
+    <string name="warning_title">Warning</string>
+    <string name="yes_btn">Yes</string>
+    <string name="no_btn">No</string>
+    <string name="error_title">Error</string>
+    <string name="cancel_btn">Cancel</string>
+    <string name="progress_dialog_msg">Processing</string>
+    <string name="login_successful_msg">Login Successful</string>
+    <string name="wrong_credentials_msg">Wrong Credentials</string>
+    <string name="on_fail_msg">Something went wrong while downloading data!</string>
+    <string name="confirm_exit_msg">Are you sure that you want to exit the application?</string>
+    <string name="owned_fragment_name">Owned</string>
+    <string name="stared_fragment_name">Stared</string>
+    <string name="user_followers_title">"Followers "</string>
+    <string name="user_following_title">"Following "</string>
+    <string name="repositories_title">Repositories</string>
+    <string name="search_title">Search for users</string>
+    <string name="repo_stared_msg">Repository moved to STARED!</string>
+    <string name="repo_not_stared_msg">Repository moved out of STARED!</string>
+    <string name="languages_title">"Languages: "</string>
+    <string name="fragment_open_name">Open</string>
+    <string name="fragment_closed_name">Closed</string>
+    <string name="fragment_all_name">All</string>
+    <string name="owner_name_title">Owner Name</string>
+    <string name="commits_title">Commits:</string>
+    <string name="branches_title">Branches:</string>
+    <string name="releases_title">Releases:</string>
+    <string name="contribution_title">Contributions:</string>
+    <string name="stars_title">Stars:</string>
+    <string name="fork_title">Fork:</string>
+    <string name="issues_title">Issues</string>
+    <string name="confirm_log_out_msg">Are you sure that you want to logout?</string>
+    <string name="options_profile_title">My profile</string>
+    <string name="options_log_out_title">Logout</string>
+</resources>

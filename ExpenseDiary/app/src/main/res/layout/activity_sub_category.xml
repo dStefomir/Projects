@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background_color_gradient"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/imageLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp">
+
+                <TextView
+                    android:id="@+id/parentCategoryTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="start|center_vertical"
+                    android:text="@string/parent_category_title"
+                    android:textSize="@dimen/textsize"
+                    android:textColor="@color/button_text_color"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/parentCategoryTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center_horizontal"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    android:gravity="end|center_vertical"
+                    android:text="Food/Drinks"
+                    android:textSize="@dimen/textsize"
+                    android:textColor="@color/button_text_color"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:background="@color/button_text_color" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/categoryImage"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:src="@drawable/ic_panorama_fish_eye_white_48dp"
+                app:border_color="@color/button_text_color"
+                app:border_width="1dp"/>
+
+            <TextView
+                android:id="@+id/subCategoryTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:textSize="@dimen/largeTextSize"
+                android:textColor="@color/button_text_color"
+                android:textStyle="bold" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <trac.portableexpensesdiary.basecomponents.AntiMonkeyButton
+                    android:id="@+id/takePhotoBtn"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="0.00"
+                    android:padding="10dp"
+                    android:textSize="@dimen/textsize"
+                    fancy:fb_borderColor="@color/button_text_color"
+                    fancy:fb_borderWidth="1dp"
+                    fancy:fb_defaultColor="@color/transparent"
+                    fancy:fb_focusColor="#5577bd"
+                    fancy:fb_fontIconSize="25sp"
+                    fancy:fb_iconResource="@android:drawable/ic_menu_camera"
+                    fancy:fb_radius="30dp"
+                    fancy:fb_text=""
+                    fancy:fb_textColor="@color/button_text_color" />
+
+                <trac.portableexpensesdiary.basecomponents.AntiMonkeyButton
+                    android:id="@+id/selectPhotoBtn"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="0.00"
+                    android:padding="10dp"
+                    android:textSize="@dimen/textsize"
+                    fancy:fb_borderColor="@color/button_text_color"
+                    fancy:fb_borderWidth="1dp"
+                    fancy:fb_defaultColor="@color/transparent"
+                    fancy:fb_focusColor="#5577bd"
+                    fancy:fb_fontIconSize="25sp"
+                    fancy:fb_iconResource="@android:drawable/ic_menu_slideshow"
+                    fancy:fb_radius="30dp"
+                    fancy:fb_text=""
+                    fancy:fb_textColor="@color/button_text_color" />
+
+                <trac.portableexpensesdiary.basecomponents.AntiMonkeyButton
+                    android:id="@+id/removePhotoBtn"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="0.00"
+                    android:padding="10dp"
+                    android:textSize="@dimen/textsize"
+                    fancy:fb_borderColor="@color/button_text_color"
+                    fancy:fb_borderWidth="1dp"
+                    fancy:fb_defaultColor="@color/transparent"
+                    fancy:fb_focusColor="#5577bd"
+                    fancy:fb_fontIconSize="25sp"
+                    fancy:fb_iconResource="@android:drawable/ic_menu_close_clear_cancel"
+                    fancy:fb_radius="30dp"
+                    fancy:fb_text=""
+                    fancy:fb_textColor="@color/button_text_color" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/categoryNameTxtLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="8dp"
+                    android:theme="@style/AppTheme">
+
+                    <EditText
+                        android:id="@+id/subCategoryName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:hint="@string/sub_category_name_title"
+                        android:inputType="text"
+                        android:textColor="@color/button_text_color" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/categoryDescriptionTxtLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="8dp"
+                    android:theme="@style/AppTheme">
+
+                    <EditText
+                        android:id="@+id/subCategoryDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:hint="@string/sub_category_description_title"
+                        android:inputType="text"
+                        android:textColor="@color/button_text_color" />
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageLayout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginLeft="40dp"
+            android:orientation="horizontal">
+
+            <trac.portableexpensesdiary.basecomponents.AntiMonkeyButton
+                android:id="@+id/cancelBtn"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginRight="15dp"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:textSize="@dimen/textsize"
+                fancy:fb_borderColor="@color/button_text_color"
+                fancy:fb_borderWidth="1dp"
+                fancy:fb_defaultColor="@color/transparent"
+                fancy:fb_focusColor="#5577bd"
+                fancy:fb_fontIconSize="25sp"
+                fancy:fb_iconPosition="top"
+                fancy:fb_radius="5dp"
+                fancy:fb_text="@string/cancel_btn"
+                fancy:fb_textColor="@color/button_text_color"
+                fancy:fb_iconResource="@drawable/ic_clear_white_48dp"
+                fancy:fb_textGravity="center_horizontal"/>
+
+            <Space
+                android:layout_width="20dp"
+                android:layout_height="wrap_content" />
+
+            <trac.portableexpensesdiary.basecomponents.AntiMonkeyButton
+                android:id="@+id/saveBtn"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:textSize="@dimen/textsize"
+                fancy:fb_borderColor="@color/button_text_color"
+                fancy:fb_borderWidth="1dp"
+                fancy:fb_defaultColor="@color/transparent"
+                fancy:fb_focusColor="#5577bd"
+                fancy:fb_fontIconSize="25sp"
+                fancy:fb_iconPosition="top"
+                fancy:fb_radius="5dp"
+                fancy:fb_text="@string/save_btn"
+                fancy:fb_textColor="@color/button_text_color"
+                fancy:fb_iconResource="@drawable/ic_done_white_48dp"
+                fancy:fb_textGravity="center_horizontal"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>

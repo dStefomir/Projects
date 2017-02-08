@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+
+    <item
+        android:id="@+id/reg_acc"
+        android:icon="@drawable/ic_account_circle_white_36dp"
+        android:title="@string/user_reg_btn"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/retrieve_acc"
+        android:icon="@drawable/ic_help_outline_white_36dp"
+        android:title="@string/retrieve_acc"
+        app:showAsAction="ifRoom" />
+</menu>

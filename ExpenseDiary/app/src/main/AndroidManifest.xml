@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="trac.portableexpensesdiary">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature
+        android:name="android.hardware.camera.flash"
+        android:required="false" />
+    <uses-feature android:name="android.hardware.camera" />
+
+    <uses-permission android:name="android.permission.IMAGE_CAPTURE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".PortableExpensesDiaryApp"
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDIIDwxTqanN0ThY8TVQwe2g19gFSrDeLU" />
+
+        <activity android:name=".login.LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".login.SignUpActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".login.AccountRetrievementActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".expense.StartExpenseTrackingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".manualexpenseregister.ManualExpenseRegisterActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".maps.ExpenseLocationActivity" />
+        <activity
+            android:name=".category.CategoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".expense.ReviewExpensesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".category.SubCategoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".smartexpenseregister.SmartExpenseRegisterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".smartexpenseregister.CameraActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".category.CategoryManagement"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="fa6d2bd76800981eaa9833fc4547f1c04e319db0" />
+    </application>
+
+</manifest>

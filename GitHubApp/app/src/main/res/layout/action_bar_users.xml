@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/menuIcon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:src="@drawable/ic_more_vert_white_36dp" />
+
+    <android.support.v7.widget.SearchView
+        android:id="@+id/userSearchView"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:gravity="center_vertical"
+        android:maxWidth="200dp"
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@+id/menuIcon" />
+
+    <TextView
+        android:id="@+id/currentRepoNameTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignParentTop="true"
+        android:gravity="center_vertical"
+        android:layout_toEndOf="@+id/userAvatarImageView"
+        android:text="User"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize" />
+
+    <ImageView
+        android:id="@+id/userAvatarImageView"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:src="@drawable/ic_person_black_36dp" />
+
+</RelativeLayout>

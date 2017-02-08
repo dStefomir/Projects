@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/color_gradient"
+    android:fillViewport="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:text="@string/reg_expense_title"
+            android:textSize="@dimen/largeTextSize"
+            android:textColor="@color/button_text_color"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/parentCategoryLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:text="@string/reg_expense_dialog_category_title"
+                android:textSize="@dimen/largeTextSize"
+                android:textColor="@color/button_text_color"
+                android:textStyle="bold" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/rootCategoryImage"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="5dp"
+                app:border_color="@color/button_text_color"
+                app:border_width="1dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/subCategoryLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/button_text_color" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="@string/reg_expense_dialog_sub_category_title"
+                android:textSize="@dimen/largeTextSize"
+                android:textColor="@color/button_text_color"
+                android:textStyle="bold" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/subCategoryImage"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="5dp"
+                app:border_color="@color/button_text_color"
+                app:border_width="1dp"/>
+
+        </LinearLayout>
+
+        <trac.portableexpensesdiary.basecomponents.AntiMonkeyButton
+            android:id="@+id/dateOfRegisteringBtn"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="5dp"
+            android:minWidth="150dp"
+            android:padding="10dp"
+            android:textSize="@dimen/textsize"
+            fancy:fb_borderColor="@color/button_text_color"
+            fancy:fb_borderWidth="1dp"
+            fancy:fb_defaultColor="@color/transparent"
+            fancy:fb_focusColor="#5577bd"
+            fancy:fb_fontIconSize="25sp"
+            fancy:fb_iconPosition="left"
+            fancy:fb_radius="5dp"
+            fancy:fb_text="@string/finish_btn"
+            fancy:fb_textColor="@color/button_text_color"
+            fancy:fb_iconResource="@drawable/ic_timelapse_white_48dp"
+            fancy:fb_textGravity="center_horizontal"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/expenseAmountTxtLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:theme="@style/AppTheme">
+
+                <EditText
+                    android:id="@+id/expenseAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:hint="@string/manual_reg_expense_amount"
+                    android:inputType="numberDecimal"
+                    android:maxLength="10"
+                    android:textColor="@android:color/white" />
+            </android.support.design.widget.TextInputLayout>
+
+            <Spinner
+                android:id="@+id/expenseAmountCurrencyTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="BGN"
+                android:popupBackground="@drawable/color_gradient"
+                android:textSize="@dimen/largeTextSize"
+                android:textColor="@color/button_text_color"
+                />
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+    <android.support.design.widget.TextInputLayout
+            android:id="@+id/expenseDescriptionTxtLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:theme="@style/AppTheme">
+
+            <EditText
+                android:id="@+id/expenseDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:hint="@string/manual_reg_expense_description"
+                android:inputType="text"
+                android:textColor="@android:color/white" />
+        </android.support.design.widget.TextInputLayout>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/locationBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/ic_room_white_36dp"
+            app:border_color="@color/button_text_color"
+            app:border_width="1dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="25dp"
+            android:orientation="horizontal">
+
+            <trac.portableexpensesdiary.basecomponents.AntiMonkeyButton
+                android:id="@+id/btnCancel"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="100dp"
+                android:padding="10dp"
+                android:textSize="@dimen/textsize"
+                fancy:fb_borderColor="@color/button_text_color"
+                fancy:fb_borderWidth="1dp"
+                fancy:fb_defaultColor="@color/transparent"
+                fancy:fb_focusColor="#5577bd"
+                fancy:fb_fontIconSize="25sp"
+                fancy:fb_iconPosition="top"
+                fancy:fb_radius="5dp"
+                fancy:fb_text="@string/cancel_btn"
+                fancy:fb_textColor="@color/button_text_color"
+                fancy:fb_iconResource="@drawable/ic_clear_white_48dp"
+                fancy:fb_textGravity="center_horizontal"/>
+
+            <Space
+                android:layout_width="20dp"
+                android:layout_height="wrap_content" />
+
+            <trac.portableexpensesdiary.basecomponents.AntiMonkeyButton
+                android:id="@+id/btnConfirm"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="100dp"
+                android:padding="10dp"
+                android:textSize="@dimen/textsize"
+                fancy:fb_borderColor="@color/button_text_color"
+                fancy:fb_borderWidth="1dp"
+                fancy:fb_defaultColor="@color/transparent"
+                fancy:fb_focusColor="#5577bd"
+                fancy:fb_fontIconSize="25sp"
+                fancy:fb_iconPosition="top"
+                fancy:fb_radius="5dp"
+                fancy:fb_text="@string/finish_btn"
+                fancy:fb_textColor="@color/button_text_color"
+                fancy:fb_iconResource="@drawable/ic_done_white_48dp"
+                fancy:fb_textGravity="center_horizontal"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

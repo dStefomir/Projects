@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#004d4d</color>
+    <color name="colorPrimaryDark">#003333</color>
+    <color name="colorPrimaryTransparently">#80003333</color>
+    <color name="backGroundColorPrimary">#004d4d</color>
+    <color name="backGroundColorPrimaryDark">#003333</color>
+    <color name="cardViewBackGroud">#331a00</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="base">#AAAAAA</color>
+
+    <color name="focus_box_corner">#ffffffff</color>
+    <color name="focus_box_frame">#ffd6d6d6</color>
+    <color name="focus_box_mask">#60000000</color>
+</resources>

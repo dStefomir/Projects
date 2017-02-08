@@ -1,0 +1,605 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_color_gradient"
+    android:fillViewport="true"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/expenseTrackingLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="15dp"
+                card_view:cardBackgroundColor="@color/colorPrimaryDark"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:textSize="@dimen/textsize"
+                            android:text="@string/expense_tracking_title"
+                            android:textColor="@color/button_text_color" />
+
+                        <ImageView
+                            android:id="@+id/expenseTrackingImageView"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="10dp"
+                            android:src="@drawable/ic_more_vert_white_36dp" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/incomeDateLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="110dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/income_date_title"
+                            android:textSize="@dimen/textsize"
+                            android:textColor="@color/button_text_color" />
+
+                        <TextView
+                            android:id="@+id/receivingIncomeDateTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:text="25th every month"
+                            android:textSize="@dimen/textsize"
+                            android:textColor="@color/button_text_color" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/daysTillIncomeLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="110dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/days_till_income_title"
+                            android:textSize="@dimen/textsize"
+                            android:textColor="@color/button_text_color" />
+
+                        <TextView
+                            android:id="@+id/daysTillIncomeTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:text="15 days"
+                            android:textSize="@dimen/textsize"
+                            android:textColor="@color/button_text_color" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/monthlyIncomeLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="110dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/monthly_income_title"
+                            android:textSize="@dimen/textsize"
+                            android:textColor="@color/button_text_color" />
+
+                        <TextView
+                            android:id="@+id/incomeTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:text="4323 BGN"
+                            android:textSize="@dimen/textsize"
+                            android:textColor="@color/button_text_color" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/expenseTrackingNotSetUpTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="10dp"
+                        android:text="@string/expense_trackng_not_set_up"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/textsize"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/balance_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="15dp"
+                card_view:cardBackgroundColor="@color/colorPrimaryDark"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/balance_hint"
+                            android:textSize="@dimen/textsize"
+                            android:textColor="@color/button_text_color" />
+
+                        <ImageView
+                            android:id="@+id/balanceImageView"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="10dp"
+                            android:src="@drawable/ic_more_vert_white_36dp" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/balanceTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:text="234.23 BGN"
+                        android:textSize="@dimen/largeTextSize"
+                        android:textColor="@color/button_text_color" />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/categoriesLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="15dp"
+                card_view:cardBackgroundColor="@color/colorPrimaryDark"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/categories_title"
+                            android:textSize="@dimen/textsize"
+                            android:textColor="@color/button_text_color" />
+
+                        <ImageView
+                            android:id="@+id/categoriesImageView"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="10dp"
+                            android:src="@drawable/ic_more_vert_white_36dp" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/categoryCountTxtView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:textSize="@dimen/largeTextSize"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/button_text_color" />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/statisticsLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="15dp"
+                card_view:cardBackgroundColor="@color/colorPrimaryDark"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/statistics_title"
+                            android:textSize="@dimen/textsize"
+                            android:textColor="@color/button_text_color" />
+
+                        <ImageView
+                            android:id="@+id/statisticsImageView"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="10dp"
+                            android:src="@drawable/ic_more_vert_white_36dp" />
+
+                    </RelativeLayout>
+
+                    <com.github.mikephil.charting.charts.PieChart
+                        android:id="@+id/pieChart"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:layout_marginBottom="10dp"
+                        android:paddingTop="10dp" />
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/selectedPieChartItemLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="7dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="7dp"
+                        android:visibility="gone"
+                        card_view:cardBackgroundColor="@color/colorPrimaryDark"
+                        card_view:cardCornerRadius="4dp"
+                        card_view:cardElevation="2dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:orientation="vertical"
+                            android:paddingLeft="4dp"
+                            android:paddingRight="4dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="2dp"
+                                android:text="@string/selected_chart_item_title"
+                                android:textSize="@dimen/textsize"
+                                android:textColor="@color/button_text_color" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginTop="5dp"
+                                android:orientation="horizontal">
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:id="@+id/selectedPieChartItemCategoryImage"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center_vertical"
+                                    app:border_color="@color/button_text_color"
+                                    app:border_width="1dp" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
+                                        android:orientation="horizontal"
+                                        android:paddingLeft="10dp">
+
+                                        <TextView
+                                            android:layout_width="80dp"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="start"
+                                            android:text="@string/reg_expense_dialog_category_title"
+                                            android:textSize="@dimen/textsize"
+                                            android:textColor="@color/button_text_color" />
+
+                                        <TextView
+                                            android:id="@+id/selectedPieItemCategory"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textSize="@dimen/textsize"
+                                            android:textColor="@color/button_text_color" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginBottom="10dp"
+                                        android:layout_marginTop="5dp"
+                                        android:orientation="horizontal"
+                                        android:paddingLeft="10dp">
+
+                                        <TextView
+                                            android:layout_width="80dp"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="start"
+                                            android:text="@string/manual_reg_expense_amount"
+                                            android:textSize="@dimen/textsize"
+                                            android:textColor="@color/button_text_color" />
+
+                                        <TextView
+                                            android:id="@+id/selectedPieItemAmount"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textSize="@dimen/textsize"
+                                            android:textColor="@color/button_text_color" />
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/pieChartLegendLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="7dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="7dp"
+                        card_view:cardBackgroundColor="@color/colorPrimaryDark"
+                        card_view:cardCornerRadius="4dp"
+                        card_view:cardElevation="2dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/button_text_color"
+                                android:text="@string/pie_chart_legend"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="10dp"
+                                android:paddingLeft="4dp"
+                                android:textSize="@dimen/textsize"
+                                android:paddingRight="4dp"/>
+
+                        <trac.portableexpensesdiary.basecomponents.StaticAntiMonkeyListView
+                            android:id="@+id/pieChartLegendListView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="40dp"
+                            android:layout_marginRight="40dp"
+                            android:layout_marginTop="10dp"
+                            android:divider="@null" />
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/lastRecordsLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                card_view:cardBackgroundColor="@color/colorPrimaryDark"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:textSize="@dimen/textsize"
+                            android:text="@string/last_two_registered_expenses_title"
+                            android:textColor="@color/button_text_color" />
+
+                        <ImageView
+                            android:id="@+id/lastRecordsImageView"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="10dp"
+                            android:src="@drawable/ic_more_vert_white_36dp" />
+
+                    </RelativeLayout>
+
+                    <trac.portableexpensesdiary.basecomponents.StaticAntiMonkeyListView
+                        android:id="@+id/lastRecordsListView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:divider="@null" />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/menuFabBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="end|bottom"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="20dp"
+        fab:menu_icon="@drawable/fab_add"
+        fab:menu_labels_padding="8dp"
+        fab:menu_labels_paddingBottom="4dp"
+        fab:menu_labels_paddingLeft="8dp"
+        fab:menu_labels_paddingRight="8dp"
+        fab:menu_labels_paddingTop="4dp"
+        fab:menu_labels_position="left"
+        fab:menu_labels_showAnimation="@anim/fab_slide_in_from_right"
+        fab:menu_labels_showShadow="true"
+        fab:menu_labels_singleLine="false"
+        fab:menu_labels_textColor="#FFFFFF"
+        fab:menu_labels_textSize="14sp"
+        fab:menu_openDirection="up"
+        fab:menu_shadowColor="#66000000"
+        fab:menu_shadowRadius="4dp"
+        fab:menu_shadowXOffset="1dp"
+        fab:menu_shadowYOffset="3dp"
+        fab:menu_showShadow="true">
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/addIncomeBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_attach_money_white_36dp"
+            fab:fab_label="@string/income_register_btn"
+            fab:fab_size="normal" />
+
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/smartExpenseRegBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_camera_white_48dp"
+            fab:fab_label="@string/smart_expense_register_title"
+            fab:fab_size="normal" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/manualExpenseRegBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_add_circle_outline_white_48dp"
+            fab:fab_label="@string/manual_expense_reg_title"
+            fab:fab_size="normal" />
+
+    </com.github.clans.fab.FloatingActionMenu>
+
+</RelativeLayout>

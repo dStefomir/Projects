@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+  <SurfaceView
+      android:id="@+id/cameraFrame"
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent"
+      />
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      >
+
+    <ImageView
+        android:id="@+id/flashImage"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal|top"
+        android:src="@drawable/ic_lightbulb_outline_white_48dp"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:id="@+id/resultTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/flashImage"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal|top"
+        android:layout_marginTop="19dp"
+        android:text="TextSample"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        android:textColor="@color/button_text_color"
+        android:textStyle="bold"
+        />
+
+    <trac.portableexpensesdiary.smartexpenseregister.FocusBoxView
+        android:id="@+id/focusBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/resultTxt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp"
+        />
+
+    <ImageView
+        android:id="@+id/finishImage"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="31dp"
+        android:src="@drawable/ic_done_white_48dp"
+        android:visibility="gone"
+        />
+
+  </RelativeLayout>
+
+</FrameLayout>

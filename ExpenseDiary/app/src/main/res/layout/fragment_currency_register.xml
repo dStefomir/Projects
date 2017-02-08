@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/color_gradient"
+    android:fillViewport="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="@string/currency_title"
+            android:textColor="@color/button_text_color"
+            android:textSize="@dimen/textsize" />
+
+        <android.support.v7.widget.SearchView
+            android:id="@+id/searchView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_marginRight="20dp" />
+
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="210dp"
+            android:layout_height="250dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
+            android:choiceMode="singleChoice"
+            android:listSelector="@color/material_deep_teal_20" />
+
+        <LinearLayout
+            android:layout_width="210dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="20dp">
+
+            <trac.portableexpensesdiary.basecomponents.AntiMonkeyButton
+                android:id="@+id/cancelBtn"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_weight="1"
+                android:textSize="@dimen/textsize"
+                fancy:fb_borderColor="@color/button_text_color"
+                fancy:fb_borderWidth="1dp"
+                fancy:fb_defaultColor="@color/transparent"
+                fancy:fb_focusColor="#5577bd"
+                fancy:fb_fontIconSize="25sp"
+                fancy:fb_iconPosition="top"
+                fancy:fb_iconResource="@drawable/ic_clear_white_48dp"
+                fancy:fb_radius="5dp"
+                fancy:fb_text="@string/cancel_btn"
+                fancy:fb_textColor="@color/button_text_color"
+                fancy:fb_textGravity="center_horizontal" />
+
+            <Space
+                android:layout_width="20dp"
+                android:layout_height="wrap_content" />
+
+            <trac.portableexpensesdiary.basecomponents.AntiMonkeyButton
+                android:id="@+id/selectBtn"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_weight="1"
+                android:textSize="@dimen/textsize"
+                fancy:fb_borderColor="@color/button_text_color"
+                fancy:fb_borderWidth="1dp"
+                fancy:fb_defaultColor="@color/transparent"
+                fancy:fb_focusColor="#5577bd"
+                fancy:fb_fontIconSize="25sp"
+                fancy:fb_iconPosition="top"
+                fancy:fb_iconResource="@drawable/ic_done_white_48dp"
+                fancy:fb_radius="5dp"
+                fancy:fb_text="@string/select_btn"
+                fancy:fb_textColor="@color/button_text_color"
+                fancy:fb_textGravity="center_horizontal" />
+
+        </LinearLayout>
+    </LinearLayout>
+</HorizontalScrollView>
